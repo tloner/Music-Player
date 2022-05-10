@@ -1,0 +1,970 @@
+/*
+to add songs, download an mp3 into the music file, a thumbnail into the thumbnails file, and go into the javascript file on a code editor and add an object to the songList array.
+syntax for adding:
+    {
+      "thumbnail": "PHOTONAME.EXTENSION",
+      "audio":"MP3NAME.mp3",
+      "songname":"SONG NAME",
+      "artistname":"ARTIST'S NAME",
+    },
+
+    (copy):
+    {
+  	  "thumbnail":"",
+  	  "audio":"",
+  	  "songname":"",
+  	  "artistname":""
+  	},
+replace PHOTONAME with the name of the thumbnail in the folder, EXTENSION with the thumbnails extension, SONG NAME with the song's name, and ARTIST'S NAME with the name of the curator.
+*/
+
+const songListMain = [
+  {
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1XZuCwzIR4hfN3_Of__IiE-AFgB1RRfZz",
+	  "audio":null,
+	  "songname":"Originals",
+	  "artistname":""
+	},
+	{
+		"thumbnail":"https://drive.google.com/uc?export=download&id=1oNh-IeZdel8tYiGMCv2uGO4tlbFc_Y5l",
+		"audio":"https://docs.google.com/uc?export=download&id=1gMG5b_Y7ApaJhpyyVVEJS-M5iyv3VyN6",
+		"songname":"Discord Shawty",
+		"artistname":"ReptileLegit"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1JFQoc9f9GfchY2ao8pa0Ff0MkDKV2EDT",
+	  "audio":"https://docs.google.com/uc?export=download&id=1tj9ULx8mYTkISA1kzfxpsM99COXLiyYp",
+	  "songname":"Swing",
+	  "artistname":"Peyruis"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1JFQoc9f9GfchY2ao8pa0Ff0MkDKV2EDT",
+	  "audio":"",
+	  "songname":"Tarlos",
+	  "artistname":"Peyruis"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1JFQoc9f9GfchY2ao8pa0Ff0MkDKV2EDT",
+	  "audio":"",
+	  "songname":"Relax",
+	  "artistname":"Peyruis"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1S5Hu667bOMNF7mxc_H-bBCUg6WAi2Tlv",
+	  "audio":"",
+	  "songname":"Rolling the Boulder",
+	  "artistname":"Wintergatan"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1hL4zxQ2-ufeiELUoMdYFnvj6tuKMP2Cj",
+	  "audio":"",
+	  "songname":"Num Num Cat",
+	  "artistname":"The Kiffness"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1hL4zxQ2-ufeiELUoMdYFnvj6tuKMP2Cj",
+	  "audio":"",
+	  "songname":"Num Num Cat (Instrumental)",
+	  "artistname":"The Kiffness"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=10hmSeXOFqK6Ko-hltYmM7V9p5u9I81pe",
+	  "audio":"",
+	  "songname":"Laxed",
+	  "artistname":"Jawsh 685"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1XZuCwzIR4hfN3_Of__IiE-AFgB1RRfZz",
+	  "audio":null,
+	  "songname":"Lofi + Chill",
+	  "artistname":""
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1TREsrSkWm8dn92KUEh7w5N8RZLHw8y77",
+	  "audio":"",
+	  "songname":"Burbank Song Playlist",
+	  "artistname":"V i b e l i s t Ch."
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=12CTTv_FZe70bWxLtly43JtD4GXuPTwbW",
+	  "audio":"",
+	  "songname":"Adagio",
+	  "artistname":"John Murphy"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1q4SCP_Dho1Mz0ZXnOGpZcXydjylL-OJM",
+	  "audio":"",
+	  "songname":"The Gentle Zephyr",
+	  "artistname":"Michael Shen"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1tSUKOUfjlZiiNgD8F0H-wSuONhSNEt5S",
+	  "audio":"",
+	  "songname":"Overcome",
+	  "artistname":"WasabiNoise"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1JfjZpUXxwtkmSc878pTy5khfIu79kFor",
+	  "audio":"",
+	  "songname":"Moss",
+	  "artistname":"Nakani"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ZKADjrdNfg6Y-pW22c1y2ppqBK27A3nn",
+	  "audio":"",
+	  "songname":"Ticking",
+	  "artistname":"TIN"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=10LCxx5Y87QaFoQPh_jK3v4rPtOZVESXG",
+	  "audio":"",
+	  "songname":"Night Walk",
+	  "artistname":"Cursedsnake"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1_1E0MOJVu5zdGAynV5ouZhjY2CF92l7U",
+	  "audio":"",
+	  "songname":"Overworld Day",
+	  "artistname":"Re-Logic"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1lPjgLywRSRbvr1ijSh1l3ATzIVNkwqWR",
+	  "audio":"",
+	  "songname":"Dawn",
+	  "artistname":"Skylike"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1v5wDH11xaUYv6pRftbddKkfvR-JqOv0h",
+	  "audio":"",
+	  "songname":"Merry Go Round of Life",
+	  "artistname":"Joe Hisaishi"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=13v4iByCBIPW54RRt5JMEfR89QqtVr5Cb",
+	  "audio":"",
+	  "songname":"Pleasure",
+	  "artistname":"InsideCore"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1XZuCwzIR4hfN3_Of__IiE-AFgB1RRfZz",
+	  "audio":null,
+	  "songname":"Legend of Zelda Lofi",
+	  "artistname":""
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1dvnQuP_c4GMbtPgAmGG-OX4Zhh10yZ94",
+	  "audio":"",
+	  "songname":"Legend of Zelda Lofi",
+	  "artistname":"Skhylian"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1XZuCwzIR4hfN3_Of__IiE-AFgB1RRfZz",
+	  "audio":null,
+	  "songname":"Zelda & Chill pt. 1",
+	  "artistname":""
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"#t=0",
+	  "songname":"Fairy Fountain",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1xDIEHGY1PPBfTMAQYKlZZawZiPHHLwdS#t=164",
+	  "songname":"Dark World",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1xDIEHGY1PPBfTMAQYKlZZawZiPHHLwdS#t=331",
+	  "songname":"Lost Woods",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1xDIEHGY1PPBfTMAQYKlZZawZiPHHLwdS#t=489",
+	  "songname":"Song of Storms",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1xDIEHGY1PPBfTMAQYKlZZawZiPHHLwdS#t=707",
+	  "songname":"Minuet of Forest",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1xDIEHGY1PPBfTMAQYKlZZawZiPHHLwdS#t=881",
+	  "songname":"Guerdo Valley",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1xDIEHGY1PPBfTMAQYKlZZawZiPHHLwdS#t=1065",
+	  "songname":"Oath to Order",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1xDIEHGY1PPBfTMAQYKlZZawZiPHHLwdS#t=1245",
+	  "songname":"Dragon Roost Island",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1xDIEHGY1PPBfTMAQYKlZZawZiPHHLwdS#t=1418",
+	  "songname":"Kakariko Village",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1xDIEHGY1PPBfTMAQYKlZZawZiPHHLwdS#t=1574",
+	  "songname":"Ballad of the Goddess",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1xDIEHGY1PPBfTMAQYKlZZawZiPHHLwdS#t=1734",
+	  "songname":"Breath of the Wild",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1xDIEHGY1PPBfTMAQYKlZZawZiPHHLwdS#t=1872",
+	  "songname":"Hateno Village",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1xDIEHGY1PPBfTMAQYKlZZawZiPHHLwdS#t=2094",
+	  "songname":"Legend of Zelda",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1xDIEHGY1PPBfTMAQYKlZZawZiPHHLwdS#t=2276",
+	  "songname":"Ocarina of Time",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1XZuCwzIR4hfN3_Of__IiE-AFgB1RRfZz",
+	  "audio":"#t=2446",
+	  "songname":"Zelda & Chill pt. 2",
+	  "artistname":""
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1ov7MVIPoCz3b1kIq4xxBdODvioGE0lIH#t=0",
+	  "songname":"Zelda's Lullaby",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1ov7MVIPoCz3b1kIq4xxBdODvioGE0lIH#t=191",
+	  "songname":"The Great Sea",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1ov7MVIPoCz3b1kIq4xxBdODvioGE0lIH#t=362",
+	  "songname":"Korok Forest",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1ov7MVIPoCz3b1kIq4xxBdODvioGE0lIH#t=524",
+	  "songname":"Kass' Theme",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1ov7MVIPoCz3b1kIq4xxBdODvioGE0lIH#t=692",
+	  "songname":"Serenade of Water",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1ov7MVIPoCz3b1kIq4xxBdODvioGE0lIH#t=863",
+	  "songname":"Hyrule Castle",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1ov7MVIPoCz3b1kIq4xxBdODvioGE0lIH#t=1013",
+	  "songname":"Song of Healing",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1ov7MVIPoCz3b1kIq4xxBdODvioGE0lIH#t=1194",
+	  "songname":"Revali's Theme",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1ov7MVIPoCz3b1kIq4xxBdODvioGE0lIH#t=1342",
+	  "songname":"Outset Island",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1ov7MVIPoCz3b1kIq4xxBdODvioGE0lIH#t=1513",
+	  "songname":"Spirit Tracks",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1ov7MVIPoCz3b1kIq4xxBdODvioGE0lIH#t=1696",
+	  "songname":"Midna's Lament",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1ov7MVIPoCz3b1kIq4xxBdODvioGE0lIH#t=1889",
+	  "songname":"Tal Tal Heights",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1ov7MVIPoCz3b1kIq4xxBdODvioGE0lIH#t=2037",
+	  "songname":"The Legendary Hero",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ChsVNgAm-x4vwOKRNEePfpiw2WCM8tjL",
+	  "audio":"https://docs.google.com/uc?export=download&id=1ov7MVIPoCz3b1kIq4xxBdODvioGE0lIH#t=2221",
+	  "songname":"Fi's Farewell",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1XZuCwzIR4hfN3_Of__IiE-AFgB1RRfZz",
+	  "audio":"#t=2377",
+	  "songname":"Chilltendo pt. 1",
+	  "artistname":""
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1Iqbf8eMLcyHqgNfL_PjbyWT1Gb_9Cn4l",
+	  "audio":"Chilltendo.mp3",
+	  "songname":"Chilltendo",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1XZuCwzIR4hfN3_Of__IiE-AFgB1RRfZz",
+	  "audio":null,
+	  "songname":"Chilltendo pt. 2",
+	  "artistname":""
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1R7CenFNAQXVHZWnLPuIIr0O45jGvNPW8",
+	  "audio":"Chilltendo 2.mp3",
+	  "songname":"Chilltendo 2",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1XZuCwzIR4hfN3_Of__IiE-AFgB1RRfZz",
+	  "audio":null,
+	  "songname":"Legend of Lofi",
+	  "artistname":""
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1nOfQDLpbRFZdyumjppSOkGJ4bxoBMIlf",
+	  "audio":"Legend of Lo-Fi.mp3",
+	  "songname":"Legend of Lofi",
+	  "artistname":"GameChops"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1XZuCwzIR4hfN3_Of__IiE-AFgB1RRfZz",
+	  "audio":null,
+	  "songname":"Celeste OST",
+	  "artistname":""
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1O9VULeEmfvfRUa9yhzTKfwNRolglATGg",
+	  "audio":"Celeste.mp3#t=0",
+	  "songname":"Ressurections",
+	  "artistname":"Lena Raine"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1O9VULeEmfvfRUa9yhzTKfwNRolglATGg",
+	  "audio":"Celeste.mp3#t=552",
+	  "songname":"First Steps",
+	  "artistname":"Lena Raine"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1O9VULeEmfvfRUa9yhzTKfwNRolglATGg",
+	  "audio":"Celeste.mp3#t=764",
+	  "songname":"Scattered and Lost",
+	  "artistname":"Lena Raine"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1O9VULeEmfvfRUa9yhzTKfwNRolglATGg",
+	  "audio":"Celeste.mp3#t=1130",
+	  "songname":"Mirror Temple",
+	  "artistname":"Lena Raine"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1O9VULeEmfvfRUa9yhzTKfwNRolglATGg",
+	  "audio":"Celeste.mp3#t=1361",
+	  "songname":"Checking In",
+	  "artistname":"Lena Raine"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1O9VULeEmfvfRUa9yhzTKfwNRolglATGg",
+	  "audio":"Celeste.mp3#t=1787",
+	  "songname":"Reflection",
+	  "artistname":"Lena Raine"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1O9VULeEmfvfRUa9yhzTKfwNRolglATGg",
+	  "audio":"Celeste.mp3#t=2144",
+	  "songname":"Golden Ridge (in love with a ghost)",
+	  "artistname":"Lena Raine"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1O9VULeEmfvfRUa9yhzTKfwNRolglATGg",
+	  "audio":"Celeste.mp3#t=2439",
+	  "songname":"Prologue",
+	  "artistname":"Lena Raine"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1O9VULeEmfvfRUa9yhzTKfwNRolglATGg",
+	  "audio":"Celeste.mp3#t=2494",
+	  "songname":"Reach for the Summit",
+	  "artistname":"Lena Raine"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1O9VULeEmfvfRUa9yhzTKfwNRolglATGg",
+	  "audio":"Celeste.mp3#t=3162",
+	  "songname":"In Stasis",
+	  "artistname":"Lena Raine"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1O9VULeEmfvfRUa9yhzTKfwNRolglATGg",
+	  "audio":"Celeste.mp3#t=3313",
+	  "songname":"Madeline and Theo",
+	  "artistname":"Lena Raine"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1O9VULeEmfvfRUa9yhzTKfwNRolglATGg",
+	  "audio":"Celeste.mp3#t=3510",
+	  "songname":"Quiet and Falling",
+	  "artistname":"Lena Raine"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1O9VULeEmfvfRUa9yhzTKfwNRolglATGg",
+	  "audio":"Celeste.mp3#t=3946",
+	  "songname":"Heart of the Mountain",
+	  "artistname":"Lena Raine"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1XZuCwzIR4hfN3_Of__IiE-AFgB1RRfZz",
+	  "audio":"#t=4830",
+	  "songname":"Theme songs",
+	  "artistname":""
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1aWPQ4nNZMYiy36TR9NEmYkwZXecphLu3",
+	  "audio":"Final Earth 2 Soundtrack.mp3",
+	  "songname":"Final Earth 2 Soundtrack",
+	  "artistname":"Stijn Cappetijn"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1KzcmmfYEaavL5IUjzqUi3DufPHDis3o3",
+	  "audio":"Gourmet Race.mp3",
+	  "songname":"Gourmet Race",
+	  "artistname":"VGR"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1GUgKx4q8pqV32Z7E5-AUKveZHgcgn_AS",
+	  "audio":"Great Fairy Fountain.mp3",
+	  "songname":"Great Fairy Fountain",
+	  "artistname":"VGR"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1NfYlrRdC_VcLT0p5kSQmFGvWJQJuWgGs",
+	  "audio":"Wii Shop.mp3",
+	  "songname":"Wii Shop",
+	  "artistname":"Neku"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=10E0ixlMGDgNuVgHtnNpAeUVyZUEOYDpV",
+	  "audio":"Gladion.mp3",
+	  "songname":"Gladion",
+	  "artistname":"Neku"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ptKTdj7bhEG7FDSE7b-HxvqvVQOMOuCG",
+	  "audio":"Mushroom Gorge.mp3",
+	  "songname":"Mushroom Gorge",
+	  "artistname":"VGR"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1k0PbHCZSu7sDyPxOzf40Lwcq60MVwyPU",
+	  "audio":"Luma.mp3",
+	  "songname":"Luma",
+	  "artistname":"VGR"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=12Qq5R1VoNVtwV2iXZZQIL9rWqzWfquYU",
+	  "audio":"Gusty Garden Galaxy.mp3",
+	  "songname":"Gusty Garden Galaxy",
+	  "artistname":"Mahito Yokota"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1DUG79D2Ov_MqjR-I4RxF-f5kAfcjDqPc",
+	  "audio":"A Boss Approaches.mp3",
+	  "songname":"A Boss Approaches",
+	  "artistname":"Mario 3D World"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1DUG79D2Ov_MqjR-I4RxF-f5kAfcjDqPc",
+	  "audio":"A Boss Approaches Faster and Boosted.mp3",
+	  "songname":"A Boss Approaches (Faster & Boosted)",
+	  "artistname":"Mario 3D World Boosted"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1BggIgly13PQkKJAn0S8npjdRGEkWiW7Q",
+	  "audio":"The Mando Theme.mp3",
+	  "songname":"The Mando Theme",
+	  "artistname":"Ludwig Göransson"
+	},
+  {
+    "thumbnail": "https://drive.google.com/uc?export=download&id=11IAgQKQDpASdPT1z5Cm9NjANd5HkS12c",
+    "audio":"LOKI ost.mp3",
+    "songname": "LOKI ost",
+    "artistname": "Natalie Holt"
+  },
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1AayK0e8FZU3bkcf3H82NGXOvdoVIRheR",
+	  "audio":"Gormott.mp3",
+	  "songname":"Gormott",
+	  "artistname":"Xenoblade"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1tQbGEUCi864kRDeR-E50VR6S1yDIUOcT",
+	  "audio":"Megalovania.mp3",
+	  "songname":"Megalovania",
+	  "artistname":"Toby Fox"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=14Nm7gKPXi-732V3twlSS0YugEBlEmotb",
+	  "audio":"Triple the Threat.mp3",
+	  "songname":"Triple the Threat",
+	  "artistname":"Bad Time Trio - Nitro"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1L6fhcBuVD0T--IjCei3SDzMVwbWqEQvD",
+	  "audio":"Bonetrousle.mp3",
+	  "songname":"Bonetrousle",
+	  "artistname":"Neku"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1x90dafGuryeyqZBbAo0y9A-R6OyGPR0I",
+	  "audio":"Memories and Dreams.mp3",
+	  "songname":"Memories and Dreams",
+	  "artistname":"Steve Gabry"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1YTiJ7Q4X7Zfa_zD473tF4U0V5EigZI3v",
+	  "audio":"Tetris Theme.mp3",
+	  "songname":"Tetris Theme",
+	  "artistname":"Doctor P"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1YTiJ7Q4X7Zfa_zD473tF4U0V5EigZI3v",
+	  "audio":"Tetris Theme Remix.mp3",
+	  "songname":"Tetris Theme (Remix)",
+	  "artistname":"Virelx"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1YTiJ7Q4X7Zfa_zD473tF4U0V5EigZI3v",
+	  "audio":"Tetris Beatbox Explained.mp3",
+	  "songname":"Tetris Beatbox",
+	  "artistname":"Verbalase"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1YTiJ7Q4X7Zfa_zD473tF4U0V5EigZI3v",
+	  "audio":"Tetris Beatbox [1 hour].mp3",
+	  "songname":"Tetris Beatbox [1 hour]",
+	  "artistname":"Verbalase"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1RXh7QxpLG3-kckAafiBlZ96jzgSpnYLD",
+	  "audio":"Jazzy Note Blocks.mp3",
+	  "songname":"Jazzy Note Blocks",
+	  "artistname":"Aaron Grooves"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1RXh7QxpLG3-kckAafiBlZ96jzgSpnYLD",
+	  "audio":"Jazzy Note Blocks [1 hour].mp3",
+	  "songname":"Jazzy Note Blocks [1 hour]",
+	  "artistname":"Aaron Grooves"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1HSp8r--1t-gaGeQEteERXMnChiIAJhbJ",
+	  "audio":"RUSH E.mp3",
+	  "songname":"RUSH E",
+	  "artistname":"Sheet Music Boss"
+	},
+	{
+	  "thumbnail": "https://drive.google.com/uc?export=download&id=1XZuCwzIR4hfN3_Of__IiE-AFgB1RRfZz",
+	  "audio":null,
+	  "songname":"Vocals",
+	  "artistname":""
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1OsuMpG9pNenRbf0RdK6A-IpwMQzwn7I0",
+	  "audio":"What's Up Danger.mp3",
+	  "songname":"What's Up Danger",
+	  "artistname":"Black Caviar and Blackway"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ihxWfRkJgd9FGMp8aIcZoFPR_8tKXU4k",
+	  "audio":"Mr. Sandman.mp3",
+	  "songname":"Mr. Sandman",
+	  "artistname":"Chordettes"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=12aRrI1eu9_0c306vyBT0Q9XJZ0bVFMQr",
+	  "audio":"This Girl.mp3",
+	  "songname":"This Girl",
+	  "artistname":"Kung"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1z8fR9KqqDWRoLjYRQcZW1ZLfCk613wrA",
+	  "audio":"This Side of Paradise.mp3",
+	  "songname":"This Side of Paradise",
+	  "artistname":"Coyote Theory"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1GBfVHba3XX9HCSGjI0V75rjdgW9R1Knt",
+	  "audio":"Selfless.mp3",
+	  "songname":"Selfless",
+	  "artistname":"Eleven Tales"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1QhkpPueHgcXdIArc9-9ivaVye97agG_H",
+	  "audio":"On My Way.mp3",
+	  "songname":"On My Way",
+	  "artistname":"Alex Lahey"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1WRyb55aK2dIT1STHzRpQCxVrMk01dEkf",
+	  "audio":"Rocket Man.mp3",
+	  "songname":"Rocket Man",
+	  "artistname":"Elton John"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1hmnCB6uaKNH-zW8uzyCckYmVYC54dJ4f",
+	  "audio":"Welcome To The Family Madrigal.mp3",
+	  "songname":"Welcome To The Family Madrigal",
+	  "artistname":"Lin-Manuel Miranda"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1hmnCB6uaKNH-zW8uzyCckYmVYC54dJ4f",
+	  "audio":"Surface Pressure.mp3",
+	  "songname":"Surface Pressure",
+	  "artistname":"Lin-Manuel Miranda"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1hmnCB6uaKNH-zW8uzyCckYmVYC54dJ4f",
+	  "audio":"We Don't Talk About Bruno.mp3",
+	  "songname":"We Don't Talk About Bruno",
+	  "artistname":"Lin-Manuel Miranda"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1M9qHheTg8pb8Haom45S9noyif5N8xB0S",
+	  "audio":"Wasabi.mp3",
+	  "songname":"Wasabi",
+	  "artistname":"Jaypitts"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1GHiXWasoiXu5EQOYOPIyLPysBJmN5bl6",
+	  "audio":"Moral of the Story.mp3",
+	  "songname":"Moral of the Story",
+	  "artistname":"Ashe"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1Qx1RpfYY0idbPZa8OK_866xPRvjvx2Ku",
+	  "audio":"Hoist Up the Thing.mp3",
+	  "songname":"Hoist Up the Thing",
+	  "artistname":"The Longest Johns"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1OSWrEZSsmPGUpY1iEWEdq0aDS_aAr0SL",
+	  "audio":"Wellerman.mp3",
+	  "songname":"Wellerman",
+	  "artistname":"Nathan Evans"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1OSWrEZSsmPGUpY1iEWEdq0aDS_aAr0SL",
+	  "audio":"Wellerman remix.mp3",
+	  "songname":"Wellerman Remix",
+	  "artistname":"Ten Second Songs, Jonathan Young, pellekofficial, NateWantsToBattIe"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1ZDqyaKw1QADD-eoNaU8ce4AQIIxByGI7",
+	  "audio":"They Need a Monster.mp3",
+	  "songname":"They Need a Monster",
+	  "artistname":"MandoPony"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1IiIERwJZlzyBbkblsmHpIgtbPOna46h7",
+	  "audio":"MORE.mp3",
+	  "songname":"MORE",
+	  "artistname":"K/DA"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1PxxQy4zJqC9ksmV4EqjL3mwd5rzpA4Tj",
+	  "audio":"Talking to the Moon.mp3",
+	  "songname":"Talking to the Moon",
+	  "artistname":"Bruno Mars"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1XYWOa5x7mEWSMlcLmuFLAFwYYfQBtep1",
+	  "audio":"If U Seek Amy.mp3",
+	  "songname":"If U Seek Amy",
+	  "artistname":"Bruno Mars"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1VVZjKvBYLDKX83mexHGkimfs5jDiHc1l",
+	  "audio":"The Nights.mp3",
+	  "songname":"The Nights",
+	  "artistname":"Avicii"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1JWwBuyAa0hI7S4M7TIIZlZphNYpDIoJM",
+	  "audio":"Waiting For Love.mp3",
+	  "songname":"Waiting For Love",
+	  "artistname":"Avicii"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1fF3dSe2TEmfo4KQ-texFsXzyGsJf8YUy",
+	  "audio":"Wake Me Up.mp3",
+	  "songname":"Wake Me Up",
+	  "artistname":"Avicii"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1aaUNJr6Dg3uejQNQSS_cG_-Q6JAhKTET",
+	  "audio":"Enemy.mp3",
+	  "songname":"Enemy",
+	  "artistname":"Imagine Dragons"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1jzomf0OUFrnRO3kbdK-mOfNoKBHiNZIm",
+	  "audio":"Piercing Light.mp3",
+	  "songname":"Piercing Light",
+	  "artistname":"League of Legends (ft. Mako)"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1l_MR9JvdSR_-_QzmeNZypPq8blMcv7rk",
+	  "audio":"Forget.mp3",
+	  "songname":"Forget",
+	  "artistname":"The Tech Thieves"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=175gXoOKvDVFUvZQLoFq4P9uKBQXWjEeT",
+	  "audio":"Fake.mp3",
+	  "songname":"Fake",
+	  "artistname":"The Tech Thieves"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1h-RU3vi5-1cRiAq1Ax2cvF4-MeA1eSdb",
+	  "audio":"I'm Blue.mp3",
+	  "songname":"I'm Blue",
+	  "artistname":"Eiffel 65"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1rZ9-_2ZmKV-hGEa1v6nlBxkvyeIdoHAJ",
+	  "audio":"When He Died.mp3",
+	  "songname":"When He Died",
+	  "artistname":"Lemon Demon"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1z5TP8Md7TY_HkmceCP67ROHspZGCv_IJ",
+	  "audio":"Fine.mp3",
+	  "songname":"Fine",
+	  "artistname":"Lemon Demon"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1UKE_7F7FG8kY28Dn4OXriVCz-bdAz-2o",
+	  "audio":"White Rabbit.mp3",
+	  "songname":"White Rabbit",
+	  "artistname":"Jefferson Airplane"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1j3uv8BFxEMseNRYetlQVvs9pIYWI6Uti",
+	  "audio":"Dark Horse.mp3",
+	  "songname":"Dark Horse",
+	  "artistname":"Katy Perry (ft. Juicy J)"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1iPmbYB4rHGwy6qCQYEygeYFAIncZOoS1",
+	  "audio":"Zitti e Buoni.mp3",
+	  "songname":"Zitti e Buoni",
+	  "artistname":"Måneskin"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1Wlg1cESLjrRcG6eFs0KiM9D1k7CTCJgo",
+	  "audio":"Beggin'.mp3",
+	  "songname":"Beggin'",
+	  "artistname":"Måneskin"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1-1Y8D4wYDi9GnFEzaXv7ZaGSoF4eK8iV",
+	  "audio":"Afraid.mp3",
+	  "songname":"Afraid",
+	  "artistname":"The Neighborhood"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1PtZDSUCJHdxfz-wHHUKCIR-UCh2tofpa",
+	  "audio":"Wires.mp3",
+	  "songname":"Wires",
+	  "artistname":"The Neighborhood"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1lqMIUczsLbJU1XrqPVzfgzW_-id6_H7i",
+	  "audio":"Happy Together.mp3",
+	  "songname":"Happy Together",
+	  "artistname":"Weezer"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1vDkLxg_u-NWfWQIo35p5TKdpYPwwoCgc",
+	  "audio":"American Idiot.mp3",
+	  "songname":"American Idiot",
+	  "artistname":"Green Day"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1Y9eg9a3QmxhwszJuD2bIOYDQsS56hYaD",
+	  "audio":"The Kids Aren't Alright.mp3",
+	  "songname":"The Kids Aren't Alright",
+	  "artistname":"The Offspring"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1t0PNuNd6eDcQkpUSMeqhOj-xdgUbW2J_",
+	  "audio":"Little Dark Age.mp3",
+	  "songname":"Little Dark Age",
+	  "artistname":"MGMT"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=14CcNVaI70TYfStYZkEAidJc7Yjy4-OH8",
+	  "audio":"Lose Yourself.mp3",
+	  "songname":"Lose Yourself",
+	  "artistname":"Eminem"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1uZPlxfBZWGLVicplLe8xnNq37wtho2sI",
+	  "audio":"Welcome to the Internet.mp3",
+	  "songname":"Welcome to the Internet",
+	  "artistname":"Bo Burnham"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1TvGJk-OgIR1XFi-UTDDneAbMaQAGdOJS",
+	  "audio":"The Fall.mp3",
+	  "songname":"The Fall",
+	  "artistname":"Lovejoy"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1TvGJk-OgIR1XFi-UTDDneAbMaQAGdOJS",
+	  "audio":"One Day.mp3",
+	  "songname":"One Day",
+	  "artistname":"Lovejoy"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1TvGJk-OgIR1XFi-UTDDneAbMaQAGdOJS",
+	  "audio":"Oh Yeah, You Gonna Cry.mp3",
+	  "songname":"Oh Yeah, You Gonna Cry",
+	  "artistname":"Lovejoy"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1OZolVUE_PpRqAjgqslmdbOD-j46OC3oY",
+	  "audio":"Sex Sells.mp3",
+	  "songname":"Sex Sells",
+	  "artistname":"Lovejoy"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1xW_FJe3xWx2342fYLy65C7setk6dVLpV",
+	  "audio":"Hooked On A Feeling.mp3",
+	  "songname":"Hooked On A Feeling",
+	  "artistname":"Blue Swede, Björn Skifs"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1xW_FJe3xWx2342fYLy65C7setk6dVLpV",
+	  "audio":"Awesome Mix Vol 1.mp3",
+	  "songname":"Awesome Mix Vol. 1",
+	  "artistname": "Guardians of the Galaxy"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=131XqLlIu7R-UUeF_UG8b2vLLmRdkyf7p",
+	  "audio":"Awesome Mix Vol 2.mp3",
+	  "songname":"Awesome Mix Vol. 2",
+	  "artistname": "Guardians of the Galaxy"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1XZuCwzIR4hfN3_Of__IiE-AFgB1RRfZz",
+	  "audio":null,
+	  "songname":"Hamilton",
+	  "artistname":""
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1umQXczKRz9g9eaf0B8rPw33XqT3-LLdh",
+	  "audio":"Alexander Hamilton.mp3",
+	  "songname":"Alexander Hamilton",
+	  "artistname":"Lin-Manuel Miranda"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1umQXczKRz9g9eaf0B8rPw33XqT3-LLdh",
+	  "audio":"hamilton.mp3",
+	  "songname":"Hamilton (FULL PLAY!)",
+	  "artistname":"Lin-Manuel Miranda"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1umQXczKRz9g9eaf0B8rPw33XqT3-LLdh",
+	  "audio":"Found-Tonight.mp3",
+	  "songname":"Found/Tonight",
+	  "artistname":"Ben Platt and Lin-Manuel Miranda"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1umQXczKRz9g9eaf0B8rPw33XqT3-LLdh",
+	  "audio":"The Story of Tonight.mp3",
+	  "songname":"The Story of Tonight",
+	  "artistname":"Lin-Manuel Miranda"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1umQXczKRz9g9eaf0B8rPw33XqT3-LLdh",
+	  "audio":"Wilbur Soot sings 'Hamilton'.mp3",
+	  "songname":"Wilbur Soot sings 'Hamilton'",
+	  "artistname":"Wilbur Soot"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1XZuCwzIR4hfN3_Of__IiE-AFgB1RRfZz",
+	  "audio":null,
+	  "songname":"Miscellaneous",
+	  "artistname":""
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=17WFvA6PyzGv4KnSLHtDEQs4vsPi4LH_U",
+	  "audio":"To The Stars.mp3",
+	  "songname":"To The Stars",
+	  "artistname":"Monstercat"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1jVSvz3f9Y9nlmiR_ZzrMr9Axiyfo7PMw",
+	  "audio":"Astronomia.mp3",
+	  "songname":"Astronomia",
+	  "artistname":"Tony Igy"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1Z3rN2rNxVRB_I35UfC8WbiYuodESYkJ6",
+	  "audio":"Hello.mp3",
+	  "songname":"Hello",
+	  "artistname":"OMFG"
+	},
+	{
+	  "thumbnail":"https://drive.google.com/uc?export=download&id=1zSrdYeH98j6Rara62yNAYAnFiffKqgWC",
+	  "audio":"Dónde queda el museo.mp3",
+	  "songname":"Dónde queda el museo",
+	  "artistname":"Señora McPeak"
+	}
+]
